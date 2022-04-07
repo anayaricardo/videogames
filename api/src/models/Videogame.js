@@ -1,4 +1,4 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes } = require("sequelize");
 // Exportamos una funcion que define el modelo
 // Luego le injectamos la conexion a sequelize.
 // module.exports = (sequelize) => {
@@ -13,58 +13,55 @@ const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
   // defino el modelo
-  sequelize.define('videogame', {
-    id: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
-      allowNull: false,
-      primaryKey: true
+  sequelize.define(
+    "videogame",
+    {
+      id: {
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
+        allowNull: false,
+        primaryKey: true,
+      },
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      description: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        validate: {
+          notEmpty: true,
+        },
+      },
+      released: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          isDate: true,
+        },
+      },
+      rating: {
+        type: DataTypes.FLOAT,
+        allowNull: false,
+        validate: {
+          isFloat: true,
+        },
+      },
+      createdInDb: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: true,
+      },
+      image: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          isUrl: true,
+        },
+      },
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    released: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        isDate: true
-      }
-    },
-    rating: {
-      type: DataTypes.DECIMAL(10,1),
-      allowNull: false,
-      validate: {
-        min: 0,
-        max: 5
-      }
-    },
-    platforms: {
-      platform: {
-        name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    }}},
-    createdInDb: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValues: true
-    },
-    image: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        isUrl: true
-      }
-    },
-  },
-  {
-    timestamps: false
-  }
+    {
+      timestamps: false,
+    }
   );
 };
-
