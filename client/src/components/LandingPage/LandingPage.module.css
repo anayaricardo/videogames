@@ -1,0 +1,106 @@
+.background {
+  border: 1px solid #000;
+  background-image: url(../../images/LandingPage.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* height: 100%; */
+  /* background: -webkit-linear-gradient(
+      -10deg,
+      rgba(45, 216, 102, 255),
+      rgba(44, 178, 47, 255),
+      rgba(37, 147, 25, 255) 
+      ); */
+  /* background: radial-gradient(rgba(45,216,102,255), rgba(44,178,47,255), rgba(37,147,25,255)); */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+  border-radius: 10px;
+  margin-top: 7%;
+  margin-bottom: 10%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.button {
+  background: black;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  /* font-weight: bold; */
+  font-size: 20px;
+  text-transform: uppercase;
+  height: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 30%;
+  margin-bottom: 10%;
+  border-radius: 5px;
+  border-color: none;
+  border: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: rgba(46, 46, 46, 255);
+  color: #22ff00;
+  transition: color 0.5s ease-in-out;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+}
+
+.link:link {
+  text-decoration: none;
+}
+
+.link:visited {
+  text-decoration: none;
+}
+
+.title {
+  font-size: 500%;
+  font-family: "Copperplate", fantasy;
+  letter-spacing: 14px;
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: #000;
+}
+
+.subtitle {
+  font-size: 300%;
+  font-weight: lighter;
+  font-family: Helvetica, Arial, sans-serif;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.subtitle2 {
+  font-size: 150%;
+  font-weight: lighter;
+  font-family: Helvetica, Arial, sans-serif;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.subtitle3 {
+  font-size: 100%;
+  font-weight: lighter;
+  font-family: Helvetica, Arial, sans-serif;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10%;
+}
