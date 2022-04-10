@@ -14,7 +14,7 @@ function App() {
         <Route exact path="/home" component={Home} />
         <Route exact path="/videogame" component={Creator}/>
         <Route exact path="/videogame/:id" component={Details}/>
-        <Route component={Eror} />
+        <Route component={Error} />
       </Switch>
     </div>
   );

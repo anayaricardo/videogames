@@ -93,6 +93,14 @@ export function getGameDetails(id) { // Esta función se encarga de llamar a la 
     }
 }
 
+export function postGame (payload) {
+    return async function(dispatch) {
+        var json = await axios.post(`http://localhost:3001/videogame`, payload)
+        console.log(json)
+        return json
+    }
+}
+
 export function filterGamesByGenre(payload) { // Esta función se encarga de filtrar los videojuegos por género
     console.log(payload)
     return {
