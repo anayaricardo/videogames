@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+/* OJO */
+body {
+  background: #0D141E;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #FFFFFF
+}
