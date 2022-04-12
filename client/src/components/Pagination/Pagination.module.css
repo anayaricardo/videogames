@@ -1,9 +1,14 @@
 .ul {
-  display: flex;
-  padding-left: 18%;
-  margin-bottom: 1.2%;
-  list-style: none;
+  /* background-color: #252525; */
+  color: #fff;
+  font-weight: 300;
   font-size: 18px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+  margin-bottom: 0.5%;
+  list-style: none;
 }
 
 .li {
@@ -12,7 +17,7 @@
 
 .button {
   background: none;
-  color: inherit;
+  color: #fff;
   border: none;
   padding: 0;
   outline: inherit;

@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { getGamesByName, clearStateVideogames } from "../../actions";
 import Style from "./Searchbar.module.css";
-import Logo from "../../images/BITS.png";
+import Logo from "../../images/BITS_HOR_TRANSP.png";
 import Glass from "../../images/MAGNIFYING_GLASS.png";
 
 export default function Searchbar({ setCurrentPage, setHeader }) {
@@ -32,8 +33,13 @@ export default function Searchbar({ setCurrentPage, setHeader }) {
   }
 
   return (
+
     <div className={Style.div1}>
-      <img src={Logo} alt="Logo" height="80px" width="220px" />
+    <Link to="/">
+    <button className={Style.buttonlogo}>
+      <img className={Style.logo} src={Logo} alt="Logo" width="125px" height="75px"/>
+    </button>
+    </Link>
       <input
         className={Style.input}
         value={name}
@@ -42,15 +48,15 @@ export default function Searchbar({ setCurrentPage, setHeader }) {
         onChange={(e) => handleChange(e)}
         onKeyPress={(e) => handleKeyPress(e)}
       />
-      <button type="submit" onClick={(e) => handleSubmit(e)}>
-        <img
-          src={Glass}
-          alt="Glass"
-          height="20px"
-          width="20px"
-          object-fit="cover"
+      <button className={Style.button} type="submit" onClick={(e) => handleSubmit(e)}>
+        <img className={Style.img}
+          src={Glass}   alt="Glass" width="25px" height="25px"
+         
         ></img>
       </button>
+      <p className={Style.p}>Powered by</p>
+      <a className={Style.a} href={"https://rawg.io"} target="_blank" >rawg.io</a>
     </div>
+
   );
 }

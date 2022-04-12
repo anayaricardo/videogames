@@ -1,20 +1,20 @@
 import React from "react";
 import Style from "./Pagination.module.css";
 
-export default function Pagination({ page, videogames, videogamePerPage }) {
+export default function Pagination({ page, allVideogames, videogamePerPage }) {
   const pages = [];
-  for (let i = 1; i <= Math.ceil(videogames / videogamePerPage); i++) {
+  for (let i = 1; i <= Math.ceil(allVideogames / videogamePerPage); i++) {
     pages.push(i);
   }
   return (
     <nav>
       <ul className={Style.ul}>
-        Pages:{" "}
+        Pages:
         {pages &&
           pages.map((number) => {
             return (
               <li key={number} className={Style.li}>
-                <button className={Style.button} onClick={() => page(number)}>
+                <button className={Style.button} onClick={() => page=(number)}>
                   {number}
                 </button>
               </li>

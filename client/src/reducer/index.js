@@ -10,6 +10,7 @@ import {
   SORT_BY_RATING,
   CLEAR_STATE_DETAILS,
   CLEAR_STATE_VIDEOGAMES,
+  POST_GAME,
 } from "../actions"; // Importamos las acciones que se van a realizar
 
 const initialState = {
@@ -21,7 +22,7 @@ const initialState = {
   gameDetails: [],
 };
 
-function rootReducer(state = initialState, action) {
+function rootReducer (state = initialState, action) {
   // Esta función es la que se encarga de todo el estado de la aplicación
   switch (
     action.type // Switch es una función que se encarga de comparar el tipo de acción que se está realizando
@@ -149,10 +150,15 @@ function rootReducer(state = initialState, action) {
         ...state,
         videogames: [],
       };
+      case POST_GAME: // Función que añade un juego a la base de datos
+      return {
+        ...state,
+        videogames: [],
+      };
 
-    default:
-      return state;
-  }
+      default:
+        return state;
+    }
 }
 
 export default rootReducer;
